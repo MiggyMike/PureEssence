@@ -1,3 +1,69 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.my-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.row {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-about {
+  // width: 49.99999%;
+  padding: 12px 24px!important;
+}
+
+.img-about{
+  max-width: 100%;
+  height: auto;
+}
+
+//=========CONTACT ========
+
+.contact-padding {
+  padding-top: 18px!important;
+  padding-bottom: 18px!important;
+}
+
+.contact-input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #87a8d0;
+  width: 100%;
+}
+
+.light-purple {
+  color: #000!important;
+  background-color: #deecfc!important;
+}
+
+:focus {
+  outline-color: #deecfc;
+}
+
+button {
+  padding: 10px;
+}
