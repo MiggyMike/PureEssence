@@ -1,0 +1,166 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: auto 0;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: rgba(0,0,0,.9);
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: rgba(0,0,0,.7);
+    text-decoration: none;
+  }
+}
+
+table {
+  table-layout: auto;
+  width: 100%;
+}
+
+th { padding-bottom: 5px;}
+
+td {
+  padding: 0 5px 7px;
+  max-width: 5rem;
+  word-wrap: break-word;
+}
+
+tr { border-bottom: 1px solid #c3b4d2; }
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+input, textarea {
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #B9CEEB;
+  width: 100%;
+}
+
+.actions>input {
+  border-width: 1.5px;
+  border-style: none;
+  width: auto;
+  text-align: center;
+}
+
+
+
+.link_to {
+  display: block;
+  text-align: center;
+}
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	/*tr { border: 1px solid #c3b4d2; }*/
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+    max-width: inherit;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		max-width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+    word-wrap: break-word;
+    /*font styling */
+    font-weight: bold;
+	}
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Name"; }
+	td:nth-of-type(2):before { content: "Description"; }
+	td:nth-of-type(3):before { content: "Image-url"; }
+
+}
