@@ -13,6 +13,10 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+p {
+  word-wrap: break-word;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -116,6 +120,7 @@ h1.product-name {
 
 img {
   vertical-align: middle;
+
 }
 
 .col-box{
