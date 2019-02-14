@@ -29,6 +29,36 @@ html {
   z-index: 1030;
 }
 
+.form-inline {
+  display: flex;
+  flex-flow: row;
+}
+
+.form-inline .form-control-sm {
+  display: inline-block;
+  width: auto;
+  border-radius: .35rem;
+  line-height: 0.6;
+}
+
+.btn, .btn-outline-success, .btn-sm {
+  display: inline-block;
+  width: auto;
+  border-color: #c3b4d2;
+  background-color: #aea1c7;
+  color: #605a69;
+  border-radius: .35rem;
+
+}
+
+.btn-outline-success:hover {
+  border-color: #c3b4d2;
+  background-color: #a08ec3;
+  color: #FFFFFF;
+  border-radius: .35rem;
+}
+
+
 body {
   position: relative;
   overflow-y: scroll;

@@ -7,16 +7,38 @@
 
     <p> You can also contact us by phone +1 000-123-4567 or email eofree@essentials.com, or you can send us a message here:</p>
 
-    <form>
+    <%= form_with(url:"/simple_pages/contact", method: "post", local: true) do |form| %>
+    <!-- <form> -->
       <div class="row">
         <div class="col-sm">
-          <p><input class="contact-input contact-padding" type="text" placeholder="Name" required name="Name"</p>
-          <p><input class="contact-input contact-padding" type="number" placeholder="How many people" required name="People"</p>
-          <p><input class="contact-input contact-padding" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T20:00"</p>
-          <p><input class="contact-input contact-padding" type="text" placeholder="Message" required name="Message"</p>
-          <p><button class="contact-button contact-section light-purple" type="submit">Submit</button></p>
+          <!-- <p><input class="contact-input contact-padding" type="text" placeholder="Name" required name="Name"</p> -->
+          <div class="form-group">
+            <%= form.label :name, class:"form-label"%>
+            <%= form.text_field :name, class: "form-control contact-input contact-padding", placeholder: "Name", required: true %>
+          </div>
+          <!-- <p><input class="contact-input contact-padding" type="number" placeholder="How many people" required name="People"</p> -->
+          <div class="form-group">
+            <%= form.label :number, class:"form-label" %>
+            <%= form.number_field :number, class: "form-control contact-input contact-padding", placeholder: "How many people", required: true %>
+          </div>
+          <!-- <p><input class="contact-input contact-padding" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T20:00"</p> -->
+          <div class="form-group">
+            <%= form.label :datetime_local, class:"form-label" %>
+            <%= form.datetime_local_field :datetime_local, class: "form-control contact-input contact-padding", placeholder: "Date and Time", required: true, min: "2019-01-01T20:00" %>
+          </div>
+          <!-- <p><input class="contact-input contact-padding" type="text" placeholder="Message" required name="Message"</p> -->
+          <div class="form-group">
+            <%= form.label :message, class:"form-label" %>
+            <%= form.text_area :message, class: "form-control contact-input contact-padding", placeholder: "Message", required: true %>
+          </div>
+          <!-- <p><button class="contact-button contact-section light-purple" type="submit">Submit</button></p> -->
+          <div class="form-group">
+            <%= form.submit "Submit", class: "px-auto contact-button contact-section light-purple" %>
+          </div>
         </div>
       </div>
-    </form>
+    <!-- </form> -->
   </div>
 </div>
+
+<% end %>

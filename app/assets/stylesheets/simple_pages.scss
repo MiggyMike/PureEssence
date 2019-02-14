@@ -57,9 +57,14 @@ img {
 
 //=========CONTACT ========
 
+
 .contact-padding {
   padding-top: 18px!important;
   padding-bottom: 18px!important;
+}
+
+.form-label {
+  display: none;
 }
 
 .contact-input {
@@ -68,6 +73,7 @@ img {
   border: none;
   border-bottom: 1px solid #87a8d0;
   width: 100%;
+  font-size: inherit;
 }
 
 .light-purple {
@@ -79,8 +85,11 @@ img {
   outline-color: #deecfc;
 }
 
-button {
+.contact-button {
+  width: auto;
   padding: 10px;
+  border-radius: .35rem;
+  margin: 2rem 0;
 }
 
 //====== LANDING PAGE =======
@@ -111,7 +120,7 @@ button {
  .active {
    background-color: #c3b4d2;
  }
- 
+
 @media
 only screen and (max-width: 375px),
 (min-device-width: 300px) and (max-device-width: 700px) {
