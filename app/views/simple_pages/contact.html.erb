@@ -1,13 +1,16 @@
 <div class="container">
   <div class="contact-container" id="contact">
     <h1>Contact</h1>
+
+    <%= flash[:notice] %>
+
     <p>Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Vulputate odio ut enim blandit volutpat maecenas. Augue eget arcu dictum varius duis at consectetur lorem. Eget nunc scelerisque viverra mauris in. Orci nulla pellentesque dignissim enim sit amet. Nisl tincidunt eget nullam non nisi est sit. Elit at imperdiet dui accumsan sit. Maecenas pharetra convallis posuere morbi leo urna. Quam adipiscing vitae proin sagittis nisl rhoncus. </p>
 
     <h4> Party hosting, 55th Mixing St, 12345 Alexandria, VA</h4>
 
     <p> You can also contact us by phone +1 000-123-4567 or email eofree@essentials.com, or you can send us a message here:</p>
 
-    <%= form_with(url:"/simple_pages/contact", method: "post", local: true) do |form| %>
+    <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
     <!-- <form> -->
       <div class="row">
         <div class="col-sm">
@@ -16,24 +19,28 @@
             <%= form.label :name, class:"form-label"%>
             <%= form.text_field :name, class: "form-control contact-input contact-padding", placeholder: "Name", required: true %>
           </div>
+          <div class="form-group">
+            <%= form.label :email, class:"form-label"%>
+            <%= form.text_field :email, class: "form-control contact-input contact-padding", placeholder: "Enter Email", required: true %>
+          </div>
           <!-- <p><input class="contact-input contact-padding" type="number" placeholder="How many people" required name="People"</p> -->
-          <div class="form-group">
-            <%= form.label :number, class:"form-label" %>
-            <%= form.number_field :number, class: "form-control contact-input contact-padding", placeholder: "How many people", required: true %>
-          </div>
+          <!-- <div class="form-group">
+          <%#  <%= form.label :number, class:"form-label" %>
+          <%# <%= form.number_field :number, class: "form-control contact-input contact-padding", placeholder: "How many people", required: true %>
+          </div> -->
           <!-- <p><input class="contact-input contact-padding" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T20:00"</p> -->
-          <div class="form-group">
-            <%= form.label :datetime_local, class:"form-label" %>
-            <%= form.datetime_local_field :datetime_local, class: "form-control contact-input contact-padding", placeholder: "Date and Time", required: true, min: "2019-01-01T20:00" %>
-          </div>
+          <!-- <div class="form-group"> -->
+            <%#<%= form.label :datetime_local, class:"form-label" %>
+            <%#<%= form.datetime_local_field :datetime_local, class: "form-control contact-input contact-padding", placeholder: "Date and Time", required: true, min: "2019-01-01T20:00" %>
+          <!-- </div> -->
           <!-- <p><input class="contact-input contact-padding" type="text" placeholder="Message" required name="Message"</p> -->
           <div class="form-group">
             <%= form.label :message, class:"form-label" %>
-            <%= form.text_area :message, class: "form-control contact-input contact-padding", placeholder: "Message", required: true %>
+            <%= form.text_area :message, class: "form-control contact-input contact-padding", placeholder: "Message (if you're inquiring about an event, please include the date time and number of people)", required: true %>
           </div>
           <!-- <p><button class="contact-button contact-section light-purple" type="submit">Submit</button></p> -->
           <div class="form-group">
-            <%= form.submit "Submit", class: "px-auto contact-button contact-section light-purple" %>
+            <%= form.submit "Send", class: "contact-button contact-section light-purple" %>
           </div>
         </div>
       </div>

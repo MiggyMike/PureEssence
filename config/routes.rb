@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   root 'simple_pages#landing_page'
   #get '/products/:id', to: 'products#show'
 
+  #thank you routes
+  post 'simple_pages/thank_you'
+
 end
