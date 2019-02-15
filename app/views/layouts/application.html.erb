@@ -51,7 +51,7 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
-        <div class="form-inline"
+        <div class="form-inline">
           <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
             <%# <%= form.label :q, 'Search' %>
             <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control-sm mr-sm-2' %>
