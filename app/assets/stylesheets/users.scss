@@ -1,0 +1,75 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// ===== LOGIN PAGE =====
+.wrapper-login h2{
+  background-color: #c3b4d2;
+  height: fit-content;
+  padding: .75em;
+  // padding-top: .85em;
+  // padding-bottom: 0.5em;
+  border-radius: .35em .35em 0 0;
+  font-size: 1.5rem;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#container-login {
+  width: 50%;
+  background: #FFF;
+  padding:  0 0 5em 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+#container-login { border-radius: .35em; }
+
+.user-cred {
+  padding-top: 2em;
+}
+
+.user-cred .btn-primary {
+  width: 100%;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #c3b4dc;
+    border-color: #c3b4dc;
+  }
+
+@media
+only screen and (max-width: 375px),
+(min-device-width: 300px) and (max-device-width: 700px) {
+#container-login {
+  width: -webkit-fill-available;
+  }
+  .form-check-input .form-check-label{
+    visibility: hidden;
+  }
+}
+
+  // ===== ERROR EXPLANATION =====
+
+  #error_explanation{
+    width: 21em;
+    background: #FFF;
+    padding:  0 0 5em 0;
+    border: 2px solid #c3b4d2;
+    border-radius: 1em 1em 0 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  }
+
+  .wrapper-login h2 #error_explanation{
+    background-color: #c3b4d2;
+    height: fit-content;
+    padding-bottom: 0.5em;
+    border-radius: .35em .35em 0 0;
+    padding-top: .85em;
+    font-size: 2em;
+    font-style: normal;
+    text-transform: uppercase;
+  }

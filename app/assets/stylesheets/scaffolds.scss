@@ -74,7 +74,7 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-  h2 {
+  #welcome  h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -190,4 +190,9 @@ only screen and (max-width: 760px),
   td:nth-of-type(4):before { content: "Scents"; }
   td:nth-of-type(5):before { content: "Price"; }
 
+}
+
+
+div.field, div.actions {
+    margin-bottom: 2em;
 }
