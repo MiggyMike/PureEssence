@@ -75,9 +75,14 @@
           </ul>
         </div>
       </nav>
+
       <div class = "alert-container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <% if notice %>
+          <p class="notice alert-warning alert-dismissable fade show" role="alert"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger alert-dismissable fade show" role="alert"><%= alert %></p>
+        <% end %>
       </div>
 
     </header>

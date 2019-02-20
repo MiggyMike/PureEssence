@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require jquery3
 //= require_tree .
+
+// for alert timeout /fade out
+$(document).on('turbolinks:load', function(){
+  console.log($(".alert"));
+  $(".alert").delay(4000).fadeOut("slow");
+});

@@ -73,3 +73,6 @@ end
 
 # Authentication 5.4
 gem 'devise'
+
+# Authorizaion library 5.5
+gem 'cancancan', '~> 2.0'
