@@ -1,36 +1,41 @@
 <br>
 <br>
 <div class="container">
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <div class="container">
+    <div>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <div>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+    <div>
+      <strong>Image url:</strong>
+      <%= @product.image_url %>
+    </div>
 
-<p>
-  <strong>Scents:</strong>
-  <%= @product.scents %>
-</p>
+    <div>
+      <strong>Scents:</strong>
+      <%= @product.scents %>
+    </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+    <div>
+      <strong>Price:</strong>
+      <%= @product.price %>
+    </div>
+  </div>
+  <div class="comments">
+    <%= @product.highest_rating_comment %>
+  </div>
 
-<div class="link_to">
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
-</div>
+  <div class="link_to">
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </div>
 
 </div>
