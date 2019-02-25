@@ -145,3 +145,10 @@ only screen and (max-width: 375px),
 }
 
 // ===== LOGIN PAGE =====
+
+// ===== PRODUCTS COMMENT PAGE - SEE views/products/show.html.erb ====
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}

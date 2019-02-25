@@ -1,41 +1,48 @@
-<br>
-<br>
-<div class="container">
-  <p id="notice"><%= notice %></p>
+<div class="container ">
+  <div class="row">
 
-  <div class="container">
-    <div>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </div>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
 
-    <div>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </div>
+      <div class="card mb-3 productbox">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <%= image_tag(@product.image_url) %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= @product.name %></h5>
+              <p class="card-text"><%= @product.scents %></p>
+              <p class="card-text"><%= @product.description %></p>
+              <p class="card-text">Price:<strong><%= @product.price %></strong></p>
+              <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div>
-      <strong>Image url:</strong>
-      <%= @product.image_url %>
-    </div>
+      <div class="link_to">
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+      </div>
 
-    <div>
-      <strong>Scents:</strong>
-      <%= @product.scents %>
-    </div>
+      <div class="card mb-3 commentbox">
+        <div class="card text-center">
+          <div class="card-body">
+              <h5 class="card-header border-light">Comment</h5>
+              <p class="card-text">Share your thoughts</p>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <button class="btn btn-sm">Submit</button>
+            </div>
+          </div>
 
-    <div>
-      <strong>Price:</strong>
-      <%= @product.price %>
+      </div>
+
+      <div class="comments">
+          <%= @product.highest_rating_comment %>
+          <%= @product.lowest_rating_comment %>
+      </div>
+
     </div>
   </div>
-  <div class="comments">
-    <%= @product.highest_rating_comment %>
-  </div>
-
-  <div class="link_to">
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
-  </div>
-
 </div>
