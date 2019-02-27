@@ -196,3 +196,25 @@ only screen and (max-width: 760px),
 div.field, div.actions {
     margin-bottom: 2em;
 }
+
+
+// PAGINATION
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #8b5bf2;
+  border-color: #8b5bf2;
+}
+
+.page-link {
+  position: inherit;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #000000;
+    text-decoration: none;
+    background-color: #ece8ee;
+    border-color: #ece8ee;
+  }
