@@ -16,6 +16,7 @@
               <p class="card-text"><%= @product.description %></p>
               <p class="card-text">Price:<strong><%= @product.price %></strong></p>
               <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+              <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
             </div>
           </div>
         </div>
@@ -26,21 +27,28 @@
         <%= link_to 'Back', products_path %>
       </div>
 
-      <div class="card mb-3 commentbox">
-        <div class="card text-center">
-          <div class="card-body">
-              <h5 class="card-header border-light">Comment</h5>
-              <p class="card-text">Share your thoughts</p>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              <button class="btn btn-sm">Submit</button>
-            </div>
-          </div>
-
+      <%= render "new_comment"%> <!-- replaced with view/products/_new_comment.html.erb-->
+      <!-- <div class="card mb-3 commentbox">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-header border-light">Comment</h5>
+          <p class="card-text">Share your thoughts</p>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <button class="btn btn-sm">Submit</button>
+        </div>
       </div>
+    </div> -->
+
+
 
       <div class="comments">
-          <%= @product.highest_rating_comment %>
-          <%= @product.lowest_rating_comment %>
+        <%= render 'comments' %>
+          <p>
+            <%= @product.highest_rating_comment %>
+          </p>
+          <p>
+            <%= @product.lowest_rating_comment %>
+          </p>
       </div>
 
     </div>

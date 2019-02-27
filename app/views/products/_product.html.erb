@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-md-3 col-box">
   <div class="product-box">
     <img><%= image_tag(product.image_url, class: "img-fluid") %></img>
-    <a href="#"><h1 class="product-name"><%= product.name %></h1></a>
+    <a href="#"><h1 class="product-name"><%= link_to product.name, product %></h1></a>
     <p><%= product.description %></p>
     <p><%= product.scents %></p>
     <strong><%= product.price %></strong>

@@ -1,0 +1,23 @@
+<div class="card mb-3 commentbox">
+  <div class="card text-center">
+    <div class="card-body">
+      <% if signed_in? %>
+        <h5 class="card-header border-light">Comment</h5>
+        <br>
+        <%= form_for([@product, @product.comments.build]) do |f| %>
+          <div>
+            <%= f.text_area :body, class:"form-control", id:"exampleFormControlTextarea1", rows:"3" %>
+          </div>
+          <div class="rating">
+            <%#= f.label :rating %>
+            <%#= f.text_field :rating, class: "rating" %>
+          </div>
+          <br>
+          <div>
+            <%= f.submit "Submit", class:"btn btn-sm" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -14,7 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require jquery.raty.js
 //= require_tree .
+
 
 // for alert timeout /fade out
 $(document).on('turbolinks:load', function(){
