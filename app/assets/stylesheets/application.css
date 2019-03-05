@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  *= require jquery.raty
+ *= require font-awesome
  */
+
+
 html {
   height: 100%;
 }

@@ -80,3 +80,7 @@ gem 'cancancan', '~> 2.0'
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap4'
+
+gem 'bootstrap', '~> 4.0.0'
+
+gem 'font-awesome-rails'
