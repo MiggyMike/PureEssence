@@ -81,6 +81,6 @@ gem 'cancancan', '~> 2.0'
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap4'
 
-gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap", ">= 4.3.1"
 
 gem 'font-awesome-rails'
