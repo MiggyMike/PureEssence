@@ -36,24 +36,10 @@ a {
   }
 }
 
-table {
-  table-layout: auto;
-  width: 100%;
-}
-
-th { padding-bottom: 5px;}
-
-td {
-  padding: 0 5px 7px;
-  max-width: 5rem;
-  word-wrap: break-word;
-}
-
-tr { border-bottom: 1px solid #c3b4d2; }
-
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    width: auto;
   }
 }
 
@@ -101,101 +87,81 @@ input, textarea {
   width: 100%;
 }
 
-.actions>input {
-  border-width: 1.5px;
-  border-style: none;
-  width: auto;
-  text-align: center;
-}
+// .actions>input {
+//   border-width: 1.5px;
+//   // border-style: none;
+//   width: auto;
+//   text-align: center;
+//   // background-color: transparent;
+// }
 
 .link_to {
   display: block;
   text-align: center;
 }
 
-h1.product-name {
-  text-align: left;
-  font-size: 1.5rem;
-}
 
-img {
-  vertical-align: middle;
-
-}
-
-.col-box{
-  padding: .5em;
-}
-
-.product-box {
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 1.5em .05em;
-  padding: .5em;
-  height: 500px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-  0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 /*
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
 and also iPads specifically.
 */
-@media
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr {
-		display: block;
-	}
-
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-
-	/*tr { border: 1px solid #c3b4d2; }*/
-
-	td {
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee;
-		position: relative;
-		padding-left: 50%;
-    max-width: inherit;
-	}
-
-	td:before {
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		max-width: 45%;
-		padding-right: 10px;
-		white-space: nowrap;
-    word-wrap: break-word;
-    /*font styling */
-    font-weight: bold;
-	}
-
-	/*
-	Label the data
-	*/
-	td:nth-of-type(1):before { content: "Name"; }
-	td:nth-of-type(2):before { content: "Description"; }
-	td:nth-of-type(3):before { content: "Image-url"; }
-  td:nth-of-type(4):before { content: "Scents"; }
-  td:nth-of-type(5):before { content: "Price"; }
-
-}
-
-
-div.field, div.actions {
-    margin-bottom: 2em;
-}
+// @media
+// only screen and (max-width: 760px),
+// (min-device-width: 768px) and (max-device-width: 1024px)  {
+//
+// 	/* Force table to not be like tables anymore */
+// 	table, thead, tbody, th, td, tr {
+// 		display: block;
+// 	}
+//
+// 	/* Hide table headers (but not display: none;, for accessibility) */
+// 	thead tr {
+// 		position: absolute;
+// 		top: -9999px;
+// 		left: -9999px;
+// 	}
+//
+// 	/*tr { border: 1px solid #c3b4d2; }*/
+//
+// 	td {
+// 		/* Behave  like a "row" */
+// 		border: none;
+// 		border-bottom: 1px solid #eee;
+// 		position: relative;
+// 		padding-left: 50%;
+//     max-width: inherit;
+// 	}
+//
+// 	td:before {
+// 		/* Now like a table header */
+// 		position: absolute;
+// 		/* Top/left values mimic padding */
+// 		top: 6px;
+// 		left: 6px;
+// 		max-width: 45%;
+// 		padding-right: 10px;
+// 		white-space: nowrap;
+//     word-wrap: break-word;
+//     /*font styling */
+//     font-weight: bold;
+// 	}
+//
+// 	/*
+// 	Label the data
+// 	*/
+// 	td:nth-of-type(1):before { content: "Name"; }
+// 	td:nth-of-type(2):before { content: "Description"; }
+// 	td:nth-of-type(3):before { content: "Image-url"; }
+//   td:nth-of-type(4):before { content: "Scents"; }
+//   td:nth-of-type(5):before { content: "Price"; }
+//
+// }
+//
+//
+// div.field, div.actions {
+//     margin-bottom: 2em;
+// }
 
 
 // PAGINATION

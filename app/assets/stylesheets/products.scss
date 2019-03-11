@@ -1,3 +1,39 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.card {
+  border: none;
+  margin: 20px 0px;
+}
+
+.card.product-show {
+    height: 35rem;
+}
+
+h5.card-title {
+  text-align: center;
+}
+
+// img {
+//   vertical-align: middle;
+//
+// }
+//
+// // .col-box{
+// //   padding: .25em;
+// //   margin: .15em;
+// // }
+//
+// .product-box {
+//   background-color: rgba(255, 255, 255, 0.8);
+//   margin: 1.5em .05em;
+//   padding: .5em;
+//   height: 500px;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+//   0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+
+
+// Editing Products

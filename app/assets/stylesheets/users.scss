@@ -17,7 +17,7 @@
 }
 
 #container-login {
-  width: 50%;
+  width: 65vh;
   background: #FFF;
   padding:  0 0 5em 0;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -30,14 +30,27 @@
   padding-top: 2em;
 }
 
-.user-cred .btn-primary {
+.user-cred .btn-outline-primary {
   width: 100%;
+}
+
+.btn-outline-primary{
+  color: #a08ec3;
+  background-color: transparent;
+  background-image: none;
+  border-color: #a08ec3;
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: #c3b4dc;
     border-color: #c3b4dc;
+  }
+
+  .form-check-input {
+    position: fixed;
+    margin-top: .3rem;
+    margin-left: -4.25rem;
   }
 
 @media
@@ -73,3 +86,28 @@ only screen and (max-width: 375px),
     font-style: normal;
     text-transform: uppercase;
   }
+
+  .form-control:focus {
+      color: #000;
+      background-color: #fff;
+      border-color: #a880ff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(180, 151, 244, 0.75);
+  }
+
+// ===== USERS DISPLAY =====
+
+  table {
+    table-layout: auto;
+    width: 100%;
+  }
+
+  th { padding-bottom: 5px;}
+
+  td {
+    padding: 0 5px 7px;
+    max-width: 5rem;
+    word-wrap: break-word;
+  }
+
+  tr { border-bottom: 1px solid #c3b4d2; }

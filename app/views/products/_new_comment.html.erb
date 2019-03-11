@@ -1,5 +1,5 @@
-<div class="card mb-3 commentbox">
-  <div class="card text-center">
+<div class="card shadow mb-3 commentbox">
+  <div class="card  text-center">
     <div class="card-body">
       <% if signed_in? %>
         <h5 class="card-header border-light">Comment</h5>
@@ -14,7 +14,7 @@
           </div>
           <br>
           <div>
-            <%= f.submit "Submit", class:"btn btn-sm" %>
+            <%= f.submit "Submit", class:"btn btn-outline-primary btn-sm" %>
           </div>
         <% end %>
       <% end %>

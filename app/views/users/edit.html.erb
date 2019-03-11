@@ -1,6 +1,9 @@
-<h1>Editing User</h1>
+<div class="container">
+  <h1>Editing User</h1>
 
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+  <%= render 'form', user: @user %>
+   <div class="container link_to">
+    <%= link_to 'Show', @user %> |
+    <%= link_to 'Back', users_path %>
+  </div>
+</div>
