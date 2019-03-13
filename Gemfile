@@ -86,3 +86,5 @@ gem 'will_paginate-bootstrap4'
 gem "bootstrap", ">= 4.3.1"
 
 gem 'font-awesome-rails'
+
+gem 'rails-controller-testing'
