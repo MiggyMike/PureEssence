@@ -2,17 +2,32 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, :all
-     if user.present?
-       user ||=User.new # guest user (not logged in)
-       can :manage, User, id: user.id
-     else
-       user.admin?
-       can :manage, :all
+
+    user ||=User.new # guest user (not logged in)
+    if user.admin?
+      can :manage, :all
+    else
+      can :manage, User, id: user.id
+      can :manage, Comment, user_id: user.id
+      can :read, :all
     end
   end
 
 
+
+      # can :manage, User, id: user.id
+      # can :manage, Comment, id: user.id
+      # can :read, :all
+  # def initialize(user)
+  #   can :read, :all
+  #    if user.present?
+  #      user ||=User.new # guest user (not logged in)
+  #      can :manage, User, id: user.id
+  #    else
+  #      user.admin?
+  #      can :manage, :all
+  #   end
+  # end
 
   # def initialize(user)
   #   if

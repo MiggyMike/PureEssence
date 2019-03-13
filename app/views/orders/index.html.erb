@@ -1,12 +1,14 @@
-<div class="row">
-  <% @orders.each do |order| %>
-    <div class="col-sm">
-      <h1>
-        Order # <%= order.id %>:
-        <%= link_to order.product.name, order%>
-      </h1>
-      <p><%= order.product.description %></p>
-      <strong>$ <%= order.product.price %></strong>
-    </div><!-- /col -->
-  <% end %>
+<div class="container">
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div class="col-sm">
+        <h5>
+          Order # <%= order.id %>:
+          <%= link_to order.product.name, order%>
+        </h5>
+        <p><%= order.product.description %></p>
+        <strong><%= number_to_currency(order.product.price) %></strong>
+      </div><!-- /col -->
+    <% end %>
+  </div>
 </div>
