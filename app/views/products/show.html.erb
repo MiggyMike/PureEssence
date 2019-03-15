@@ -6,8 +6,8 @@
 
       <div class="card shadow mb-3 productbox">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <%= image_tag(@product.image_url) %>
+          <div class="col-md-3">
+            <%= image_tag(@product.image_url)%>
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -18,18 +18,24 @@
               <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
               <p>Average Rating:</p>
               <p class="rated" data-score="<%= @product.average_rating %>"></p>
+              <%= form_with(url: '/payments/create') do |form| %>
+                <%= render partial: "shared/stripe_checkout_button" %>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="link_to">
-        <%= link_to 'Edit', edit_product_path(@product) %> |
-        <%= link_to 'Back', products_path %>
-      </div>
+      <% if user_signed_in? && current_user.admin? %>
+        <div class="link_to">
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+          <%= link_to 'Back', products_path %>
+        </div>
+        <% end %>
 
-      <%= render "new_comment"%>
-
+      <% if user_signed_in? && current_user.present? %>
+        <%= render "new_comment"%>
+      <% end %>
 
 
       <div class="comments">
