@@ -55,13 +55,13 @@
             </li>
           </ul>
 
-          <form class="form-inline ml-auto">
-            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+          <!-- <form class="form-inline ml-auto"> -->
+            <%= form_with(url: products_path, method: 'get', local: true, class:"form-inline ml-auto") do |form| %>
               <%# <%= form.label :q, 'Search' %>
               <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control-sm mr-sm-2' %>
               <%= form.submit 'search', class: 'btn btn-outline-success btn-sm my-2 my-sm-0' %>
             <% end %>
-          </form>
+          <!-- </form> -->
 
           <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
