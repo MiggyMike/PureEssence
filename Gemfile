@@ -92,3 +92,6 @@ gem 'font-awesome-rails'
 gem 'rails-controller-testing'
 
 gem 'stripe'
+
+# Security tool via brakemansanncer.org
+gem 'brakeman'
