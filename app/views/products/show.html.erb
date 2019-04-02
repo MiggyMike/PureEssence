@@ -7,9 +7,9 @@
       <div class="card shadow mb-3 productbox">
         <div class="row no-gutters">
           <div class="col-md-3">
-            <%= image_tag(@product.image_url)%>
+            <%= image_tag('Dropper-Bottle-Mockup-SM2.jpg', class: 'img-fluid img-zoom', data_zoom_image: '@product.product_image.url')%>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="card-body">
               <h5 class="card-title"><%= @product.name %></h5>
               <p class="card-text"><%= @product.scents %></p>

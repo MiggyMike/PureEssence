@@ -8,8 +8,13 @@
   margin: 20px 0px;
 }
 
+.card-body {
+  flex: 1 1 auto;
+  padding: .98rem 2rem;
+}
+
 .card.product-show {
-    height: 35rem;
+    height: auto;
 }
 
 h5.card-title {

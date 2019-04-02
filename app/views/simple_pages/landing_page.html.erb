@@ -18,7 +18,7 @@
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
       <div class="carousel-item<%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
+        <%= image_tag('Dropper-Bottle-Mockup-SM2-NB.jpg', size:'50vw', class: "img-fluid") %>
         <div class="carousel-caption">
           <%= link_to product.name, product %>
         </div>
