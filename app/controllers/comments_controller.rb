@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     product = @comment.product_id
     @comment.destroy
-    redirect_back fallback_location: comment #changed from redirect_to product as a work around from deleting comments and page refreshing.
+    redirect_back fallback_location: @comment #changed from redirect_to product as a work around from deleting comments and page refreshing.
   end
 
   private
