@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
+        format.js
       else
         format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     product = @comment.product_id
     @comment.destroy
-    redirect_to product
+    redirect_back fallback_location: comment #changed from redirect_to product as a work around from deleting comments and page refreshing.
   end
 
   private
