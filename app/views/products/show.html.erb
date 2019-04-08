@@ -11,9 +11,11 @@
           </div>
           <div class="col-md-9">
             <div class="card-body">
+              <% cache @product do %>
               <h5 class="card-title"><%= @product.name %></h5>
               <p class="card-text"><%= @product.scents %></p>
               <p class="card-text"><%= @product.description %></p>
+              <% end %>
               <p class="card-text">Price:<strong><%= number_to_currency(@product.price, class:"price")%></strong></p>
               <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
               <p>Average Rating:</p>

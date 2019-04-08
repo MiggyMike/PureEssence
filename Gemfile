@@ -95,3 +95,6 @@ gem 'stripe'
 
 # Security tool via brakemansanncer.org
 gem 'brakeman'
+
+# MEMcachier for heroku
+gem 'dalli'
