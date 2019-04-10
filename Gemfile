@@ -98,3 +98,6 @@ gem 'brakeman'
 
 # MEMcachier for heroku
 gem 'dalli'
+
+#Redis for database
+gem 'redis-rails'
