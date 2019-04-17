@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   #get '/products/:id', to: 'products#show'
 
+  # ActionCable
+  mount ActionCable.server => '/cable'
 
 
 end

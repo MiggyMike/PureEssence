@@ -36,6 +36,8 @@
         </div>
         <% end %>
 
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
       <% if user_signed_in? && current_user.present? %>
         <%= render "new_comment"%>
       <% end %>
