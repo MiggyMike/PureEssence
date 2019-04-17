@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: postgresql #redis
-  url:postgres://jvirnlxrhfcdgq:8c7edb5e54bd2278a5f6f9a656a9233a860117e4992c3e911789a87fd8044f43@ec2-54-225-89-195.compute-1.amazonaws.com:5432/d6huka21pquspk #<%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: postgres://jvirnlxrhfcdgq:8c7edb5e54bd2278a5f6f9a656a9233a860117e4992c3e911789a87fd8044f43@ec2-54-225-89-195.compute-1.amazonaws.com:5432/d6huka21pquspk #<%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
   channel_prefix: sample_app_production
