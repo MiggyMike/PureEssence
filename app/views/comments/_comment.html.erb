@@ -8,7 +8,7 @@
 
     <p>
       <%= comment.user.first_name %>
-      <% if signed_in? && current_user.admin? %>
+      <% if current_user && current_user.admin? %>
         <%= link_to ('<span class="fa fa-trash"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
 

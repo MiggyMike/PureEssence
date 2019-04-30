@@ -2,6 +2,4 @@
 
 $("#new_comment").html("Thank you for your review!");  // thank you message
 
-$('.product-reviews').prepend("<%= j render @comment %>");
-
 $("#average_rating").attr('data-score', "<%= @product.average_rating %>"); //to update the display of the new rating, this updates the display in products/show.html.erb

@@ -5,7 +5,7 @@
       <p id="notice"><%= notice %></p>
 
       <div class="card shadow mb-3 productbox">
-        <div class="row no-gutters">
+        <div class="row no-gutters data-product-id="<%= @product.id %>"">
           <div class="col-md-3">
             <%= image_tag('Dropper-Bottle-Mockup-SM2.jpg', class: 'img-fluid img-zoom', data_zoom_image: '@product.product_image.url')%>
           </div>
@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <% if user_signed_in? && current_user.admin? %>
+      <% if current_user && current_user.admin? %>
         <div class="link_to">
           <%= link_to 'Edit', edit_product_path(@product) %> |
           <%= link_to 'Back', products_path %>
@@ -38,7 +38,7 @@
 
       <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
-      <% if user_signed_in? && current_user.present? %>
+      <% if current_user && current_user.present? %>
         <%= render "new_comment"%>
       <% end %>
 
