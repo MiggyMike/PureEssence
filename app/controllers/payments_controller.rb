@@ -7,6 +7,8 @@ class PaymentsController < ApplicationController
     # declaring instance variable=defined to find product
     @product=Product.find(params[:product_id])
     @user=current_user
+    @stripe_email=params[:stripeEmail]
+
     token = params[:stripeToken]
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
@@ -32,6 +34,6 @@ class PaymentsController < ApplicationController
       err  = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-    redirect_to product_path(@product)
+    redirect_to product_path(@product), notice: "Thank you for your Order!"
   end
 end
