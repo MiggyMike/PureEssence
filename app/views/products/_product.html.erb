@@ -1,7 +1,7 @@
 <% cache product do %>  <!--added cache here-->
   <div class="col-xs-12 col-md-3 col-box">
     <div class="card product-show shadow my-3 bg-white rounded">
-      <img><%= image_tag('Dropper-Bottle-Mockup-SM2.jpg', class: "card-img-top img-fluid") %></img>
+      <img><%= image_tag(product.image_url, class: "card-img-top img-fluid") %></img>
       <div class="card-body">
         <a href="#"><h5 class="card-title"><%= link_to product.name, product %></h5></a>
       </div>
